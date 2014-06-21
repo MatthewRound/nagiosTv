@@ -49,6 +49,7 @@ class PharMaker
 			file_put_contents($libIncFile, $contents);
 		} catch (exception $e) {
             printf("Problem adding contents to incfile %s", $libIncFile);    
+			echo $e->message();
 		}
 		try {
 			$pharName = $project.".phar";

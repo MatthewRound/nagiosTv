@@ -6,6 +6,8 @@
 
 	<property name="base" location="./"/>
 	<property name="appDir" location="${base}/app" />
+
+	<property name="distDir" location="${base}/dist" />
 	<property name="dirTests" location="${appDir}/tests" />
 	<property name="phpunitConfig" location="${dirTests}/bootstrap.php" />
 	<property name="logs" location="${base}/logs" />
@@ -33,13 +35,14 @@
 	
 	<!-- makes a phar file -->
 	<target name="makePhar" description="Makes the distribution phar file." >
+		<mkdir dir="${distDir}" />
 		<exec executable="php">
 			<arg value="${appDir}/makePhar.php" />
 			<arg value="${ant.project.name}" />
 			<arg value="${appDir}" />
 		</exec>
-		<!--delete file="lib.inc" /-->
-
+		<delete file="lib.inc" />
+		<move tofile="${distDir}/${ant.project.name}.phar" file="${ant.project.name}.phar" />
     </target>
 
 
@@ -65,7 +68,7 @@
 	<target name="deployToUsersPublicHtml" depends="makePhar" description="Deploys to the users public_html.">
 		<delete dir="${user.home}/${usersPublicHTMLDir}/${ant.project.name}" />
 		<mkdir dir="${user.home}/${usersPublicHTMLDir}/${ant.project.name}" />
-		<copy tofile="${user.home}/${usersPublicHTMLDir}/${ant.project.name}/index.phar" file="${ant.project.name}.phar" />
+		<copy tofile="${user.home}/${usersPublicHTMLDir}/${ant.project.name}/index.phar" file="${distDir}/${ant.project.name}.phar" />
 	</target>
 
 
