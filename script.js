@@ -45,11 +45,11 @@ function update()
 
 function formatSummaryBar(result)
 {
-	var ret = "<p class=\"resultwarn\">Warning:"+result.warn+"</p>";
-	ret +=  "<p class=\"resultcrit\">Critical:"+result.crit+"</p>";
-	ret +=  "<p class=\"resultok\">OK:"+result.ok+"</p>";
-	ret +=  "<p class=\"resultunknown\">Unknown:"+result.unknown+"</p>";
-	return ret;
+	var formattedOutput = "<p class=\"resultwarn\">Warning:"+result.warn+"</p>";
+	formattedOutput +=  "<p class=\"resultcrit\">Critical:"+result.crit+"</p>";
+	formattedOutput +=  "<p class=\"resultok\">OK:"+result.ok+"</p>";
+	formattedOutput +=  "<p class=\"resultunknown\">Unknown:"+result.unknown+"</p>";
+	return formattedOutput;
 }
 
 
@@ -68,15 +68,17 @@ function format(result, count)
 	var serviceNamePlaceHolder 
 		= limitStringChars(result.service_description, 48);
 	var hostNamePlaceHolder = limitStringChars(result.host_name, 48);
-    var ret = "<div id=\"" + id + "\">";
-    ret += "<p class=\"host_name\">" + hostNamePlaceHolder + "</p>";
-    ret += "<p class=\"plugin_output\">" + result.plugin_output + "</p>";
-    ret += "<p class=\"state_changed_date\">State since: ";
-	ret += stateChangedDateAsString + "</p>";
-    ret += "<p class=\"next_check_date\">Next check: " + nextCheckDateAsString;
-	ret += "</p>";
-    ret += "<p class=\"service_description\">" + serviceNamePlaceHolder;
-    ret += "</p></div>";
+    var formattedOutput = "<div id=\"" + id + "\">";
+    formattedOutput += "<p class=\"host_name\">" + hostNamePlaceHolder + "</p>";
+    formattedOutput += "<p class=\"plugin_output\">" + result.plugin_output + "</p>";
+    formattedOutput += "<div class=\"dates\">";
+    formattedOutput += "<p class=\"state_changed_date\">State since: ";
+	formattedOutput += stateChangedDateAsString + "</p>";
+    formattedOutput += "<p class=\"next_check_date\">Next check: " + nextCheckDateAsString;
+	formattedOutput += "</p>";
+	formattedOutput += "</div>";
+    formattedOutput += "<p class=\"service_description\">" + serviceNamePlaceHolder;
+    formattedOutput += "</p></div>";
     return ret;
 }
 
@@ -103,21 +105,21 @@ function getDivId(currentState)
 
 function formatDateString(dateToFormat)
 {
-	var ret = "";
-	ret += dateToFormat.getHours() + ":";
-	ret += dateToFormat.getMinutes() + ":";
-	ret += dateToFormat.getSeconds() + " (";
-	ret += dateToFormat.getDate() + "/";  
-	ret += (dateToFormat.getMonth()+1) + ")";
-	return ret;
+	var formattedDateString = "";
+	formattedDateString += dateToFormat.getHours() + ":";
+	formattedDateString += dateToFormat.getMinutes() + ":";
+	formattedDateString += dateToFormat.getSeconds() + " (";
+	formattedDateString += dateToFormat.getDate() + "/";  
+	formattedDateString += (dateToFormat.getMonth()+1) + ")";
+	return formattedDateString;
 }
 
 
 function limitStringChars(stringToLimit, limit)
 {
-	var ret = stringToLimit; 
+	var limitedString = stringToLimit; 
 	if (stringToLimit.length > limit) {
 		ret = stringToLimit.substring(-1, (limit-2)) + "..";
 	}
-	return ret;
+	return limitedString;
 }

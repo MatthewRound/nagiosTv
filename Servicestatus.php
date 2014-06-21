@@ -12,9 +12,7 @@
  *
  */
 
-
 require_once "StatusPopulator.php";
-
 
 /**
  * Servicestatus 
@@ -2774,4 +2772,3 @@ class Servicestatus extends StatusPopulator
 
 
 }
-?>

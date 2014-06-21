@@ -12,7 +12,6 @@
  *
  */
 
-
 require_once "File.php";
 require_once "StatusPopulator.php";
 require_once "Contactstatus.php";
@@ -21,8 +20,6 @@ require_once "Info.php";
 require_once "Programstatus.php";
 require_once "Servicestatus.php";
 require_once "ServiceList.php";
-
-
 
 /**
  * Status 
@@ -325,4 +322,3 @@ class Status
 
 
 }
-?>

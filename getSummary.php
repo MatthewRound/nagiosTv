@@ -27,5 +27,3 @@ if ($parseResultOk) {
 } else {
     print '<p class="problem">'.$parseResult.' File='.$statusFileLocation.'</p>';
 }
-?>
-

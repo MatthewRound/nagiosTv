@@ -14,7 +14,6 @@
 
 require_once "StatusPopulator.php";
 
-
 /**
  * Info 
  * 
@@ -364,4 +363,3 @@ class Info extends StatusPopulator
 
 
 }
-?>

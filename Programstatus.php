@@ -12,9 +12,7 @@
  *
  */
 
-
 require_once "StatusPopulator.php";
-
 
 /**
  * Programstatus 
@@ -2125,4 +2123,3 @@ class Programstatus extends StatusPopulator
 
 
 }
-?>

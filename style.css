@@ -93,6 +93,8 @@ circle.ok {
 	float			:bottom;
 	font			:165% Arial;
 	margin			:1%;
+	height			:60%;
+	color			:#000000;
 }
 
 
@@ -177,4 +179,10 @@ h1 {
 
 .resultunknown {
 	background		:#ffa500;
+}
+
+.dates {
+	width:100%;
+	margin-top:-10px;
+	float:left;
 }
