@@ -13,7 +13,7 @@
  */ 
 
 
-require_once DIR_INTERFACES."CommandFactoryInterface.php";
+/* require_once DIR_INTERFACES."CommandFactoryInterface.php"; */
 
 
 /**                                                           
@@ -61,12 +61,13 @@ class CommandFactory implements CommandFactoryInterface
                 $file = DIR_COMMANDS.$className.".php";
             }
             //TODO try catch this?
-            include_once $file;
+/*             include_once $file; */
             if (!class_exists($className)) { 
                 $action = "Default";
                 $className = $commandNamePrefix.UCFirst($action);
                 $file = DIR_COMMANDS.$className.".php";
             }
+
             $cmd = new $className();
         } else {
             $action = "Default";

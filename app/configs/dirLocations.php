@@ -39,5 +39,6 @@ define("DIR_LOGS", __DIR__."../../logs/". APP_NAME. ".log");
 /**
  * Errors
  */
-define("ERROR_STDOUT_TOO", true);
+define("ERROR_STDOUT_TOO", false);
 define("ERROR_USE_COLOUR_FOR_STDOUT", true);
+

@@ -13,7 +13,7 @@
  */   
 
 
-require_once DIR_COMMANDS."CommandAbstract.php";
+/* require_once DIR_COMMANDS."CommandAbstract.php"; */
 
 
 /**                                                                        

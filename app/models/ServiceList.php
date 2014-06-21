@@ -12,7 +12,7 @@
  *
  */
 
-require_once "Servicestatus.php";
+/* require_once "Servicestatus.php"; */
 
 /**
  * ServiceList 

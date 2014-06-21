@@ -32,6 +32,30 @@ abstract class Command
 {
 
 
+	/**
+	 * getServiceList 
+	 * 
+	 * @access public
+	 * @return void
+	 */
+	public function getServiceList()
+	{
+		$status = new Status();
+		$configurationProperties = parse_ini_file("properties.ini");
+		$statusFileLocation = $configurationProperties['location'];
+		$status->setStatusFileLocation($statusFileLocation);
+		$parseResult = $status->parseStatusFile();
+		$parseResultOk = is_bool($parseResult) && $parseResult == true;
+		if ($parseResultOk) {
+			$this->serviceList = $status->getServiceList();
+		} else {
+			print '<p class="problem">'.$parseResult.' File='.$statusFileLocation.'</p>';
+			exit;
+		}
+		return $this->serviceList;
+	}
+
+
     /**
      * execute 
      * 

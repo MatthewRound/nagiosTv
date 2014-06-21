@@ -2,7 +2,7 @@ function update()
 {
 	$.ajax({
 		type : "POST",
-		url  : "getSummary.php",
+		url  : "?command=getSummary",
 		data : "",
 		success: function (msg) {
 			var summaryDiv = document.getElementById('summary');
@@ -18,7 +18,7 @@ function update()
 		});
 	$.ajax({
 		type: "POST",
-		url: "getProblemServices.php",
+		url: "?command=getProblemServices",
 		data: "",
 		success: function (msg) {
 			var resultDiv = document.getElementById('results');
@@ -45,10 +45,10 @@ function update()
 
 function formatSummaryBar(result)
 {
-	var formattedOutput = "<p class=\"resultwarn\">Warning:"+result.warn+"</p>";
-	formattedOutput +=  "<p class=\"resultcrit\">Critical:"+result.crit+"</p>";
-	formattedOutput +=  "<p class=\"resultok\">OK:"+result.ok+"</p>";
+	var formattedOutput =  "<p class=\"resultcrit\">Critical:"+result.crit+"</p>";
+	formattedOutput += "<p class=\"resultwarn\">Warning:"+result.warn+"</p>";
 	formattedOutput +=  "<p class=\"resultunknown\">Unknown:"+result.unknown+"</p>";
+	formattedOutput +=  "<p class=\"resultok\">OK:"+result.ok+"</p>";
 	return formattedOutput;
 }
 
@@ -79,7 +79,7 @@ function format(result, count)
 	formattedOutput += "</div>";
     formattedOutput += "<p class=\"service_description\">" + serviceNamePlaceHolder;
     formattedOutput += "</p></div>";
-    return ret;
+    return formattedOutput;
 }
 
 

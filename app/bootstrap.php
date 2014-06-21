@@ -12,9 +12,21 @@
  *
  */
 
-set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. '/lib/');
-set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. './lib/');
+set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. '/commands/');
+set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. './commands/');
 
+set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. '/exceptions/');
+set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. './exceptions/');
+
+set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. '/interfaces/');
+set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. './interfaces/');
+
+set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. '/models/');
+set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. './models/');
+
+
+set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. '/views/');
+set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. './views/');
 
 require_once "configs/dirLocations.php";
 require_once DIR_MODEL."Errors.php";

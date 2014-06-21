@@ -13,7 +13,7 @@
  */
 
 
-require_once "StatusPopulator.php";
+/* require_once "StatusPopulator.php"; */
 
 
 /**

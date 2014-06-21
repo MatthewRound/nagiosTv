@@ -6,8 +6,8 @@
 
 	<property name="base" location="./"/>
 	<property name="appDir" location="${base}/app" />
-
 	<property name="distDir" location="${base}/dist" />
+	<property name="propertiesFile" location="${appDir}/configs/properties.ini" />
 	<property name="dirTests" location="${appDir}/tests" />
 	<property name="phpunitConfig" location="${dirTests}/bootstrap.php" />
 	<property name="logs" location="${base}/logs" />
@@ -43,6 +43,7 @@
 		</exec>
 		<delete file="lib.inc" />
 		<move tofile="${distDir}/${ant.project.name}.phar" file="${ant.project.name}.phar" />
+		<copy tofile="${distDir}/properties.ini" file="${propertiesFile}" />
     </target>
 
 
@@ -69,6 +70,7 @@
 		<delete dir="${user.home}/${usersPublicHTMLDir}/${ant.project.name}" />
 		<mkdir dir="${user.home}/${usersPublicHTMLDir}/${ant.project.name}" />
 		<copy tofile="${user.home}/${usersPublicHTMLDir}/${ant.project.name}/index.phar" file="${distDir}/${ant.project.name}.phar" />
+		<copy tofile="${user.home}/${usersPublicHTMLDir}/${ant.project.name}/properties.ini" file="${distDir}/properties.ini" />
 	</target>
 
 

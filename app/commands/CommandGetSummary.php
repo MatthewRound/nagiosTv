@@ -12,29 +12,16 @@
  *
  */
 
-require_once "Status.php";
-
 class CommandGetSummary extends Command
 {
 
     public function execute(CommandContext $context)
 	{
-		$status = new Status();
-		$configurationProperties = parse_ini_file("properties.ini");
-		$statusFileLocation = $configurationProperties['location'];
-		$status->setStatusFileLocation($statusFileLocation);
-		$parseResult = $status->parseStatusFile();
-		$parseResultOk = is_bool($parseResult) && $parseResult == true;
-		if ($parseResultOk) {
-			$serviceList = $status->getServiceList();
-			$jsonString = $serviceList->getSummary();
-			print $jsonString;
-		} else {
-			print '<p class="problem">'.$parseResult.' File='.$statusFileLocation.'</p>';
-		}
+		$this->display($this->getServiceList()->getSummary());
 	}
 
     public function display($xml)
 	{
+		print $xml;
 	}
 }

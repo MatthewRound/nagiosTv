@@ -13,10 +13,10 @@
  */
 
 
-require_once DIR_INTERFACES."ControllerInterface.php";
-require_once DIR_MODEL."CommandContext.php";
-require_once DIR_MODEL."CommandFactory.php";
-require_once DIR_MODEL."Errors.php";
+/* require_once DIR_INTERFACES."ControllerInterface.php"; */
+/* require_once DIR_MODEL."CommandContext.php"; */
+/* require_once DIR_MODEL."CommandFactory.php"; */
+/* require_once DIR_MODEL."Errors.php"; */
 
 
 /**                                                                           
