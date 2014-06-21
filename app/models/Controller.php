@@ -13,12 +13,6 @@
  */
 
 
-/* require_once DIR_INTERFACES."ControllerInterface.php"; */
-/* require_once DIR_MODEL."CommandContext.php"; */
-/* require_once DIR_MODEL."CommandFactory.php"; */
-/* require_once DIR_MODEL."Errors.php"; */
-
-
 /**                                                                           
  * Controller
  *
@@ -148,10 +142,6 @@ class Controller implements ControllerInterface
             );
         } else {
             $return = true;
-            //sucess
-            //dispatch view
-            //TODO rob the fucking lot of all the headers and send 
-            //to backend as a log command
         }   
         return $return;
     }  

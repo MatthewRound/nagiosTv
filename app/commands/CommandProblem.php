@@ -13,9 +13,6 @@
  */ 
 
 
-require_once DIR_COMMANDS."CommandAbstract.php";
-
-
 /**                                                                            
  * CommandProblem 
  *                                                                            
@@ -40,7 +37,7 @@ class CommandProblem extends Command
      * @access public
      * @return void
      */
-    function execute(CommandContext $context)
+    public function execute(CommandContext $context)
     {
         $error = $context->get("error")==null? "":$context->get("error");
         $this->display($error);
@@ -55,11 +52,9 @@ class CommandProblem extends Command
      * @access public
      * @return void
      */
-    function display($xml)
+    public function display($xml)
     {
-        include_once DIR_VIEWS."header.php";
         include_once DIR_VIEWS."problem.php";
-        include_once DIR_VIEWS."footer.php";
     }
 
 

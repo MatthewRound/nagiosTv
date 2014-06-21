@@ -12,8 +12,6 @@
  *
  */
 
-/* require_once "StatusPopulator.php"; */
-
 /**
  * Info 
  * 

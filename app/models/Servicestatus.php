@@ -12,7 +12,6 @@
  *
  */
 
-/* require_once "StatusPopulator.php"; */
 
 /**
  * Servicestatus 

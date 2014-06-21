@@ -86,7 +86,7 @@ class File
      * @access protected
      * @return void
      */
-    function __construct()
+    public function __construct()
     {
         $this->location = "/tmp"; //seems like a safe default...
         $this->name = "unspecified name";

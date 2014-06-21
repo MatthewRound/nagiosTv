@@ -12,7 +12,6 @@
  *
  */
 
-/* require_once "Servicestatus.php"; */
 
 /**
  * ServiceList 

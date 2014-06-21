@@ -13,9 +13,6 @@
  */   
 
 
-/* require_once DIR_COMMANDS."CommandAbstract.php"; */
-
-
 /**                                                                        
  * CommandDefault                                                        
  *                                                                          
@@ -40,7 +37,7 @@ class CommandDefault extends Command
      * @access public
      * @return void
      */
-    function execute(CommandContext $context)
+    public function execute(CommandContext $context)
     {
         $this->display("");
     }
@@ -54,7 +51,7 @@ class CommandDefault extends Command
      * @access public
      * @return void
      */
-    function display($xml)
+    public function display($xml)
     {
         include_once DIR_VIEWS."frontend.php";
     }
@@ -74,7 +71,6 @@ class CommandDefault extends Command
         $classname = get_class($name);
         $classnameIsPrefixedWithCommand 
             = preg_match('/[Cc]ommand/', $classname);
-        //print_r($classnameIsPrefixedWithCommand);
         if ($classnameIsPrefixedWithCommand) {
             $classname=lcfirst(substr($classname, 7, strlen($classname)-7));    
         }

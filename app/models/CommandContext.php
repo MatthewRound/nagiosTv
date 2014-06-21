@@ -13,11 +13,6 @@
  */   
 
 
-/* require_once DIR_INTERFACES."CommandContextInterface.php"; */
-/* require_once DIR_MODEL."Database.php"; */
-/* require_once DIR_MODEL."Errors.php"; */
-
-
 /**                                                                            
  * CommandContext
  *
