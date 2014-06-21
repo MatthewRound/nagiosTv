@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<project name="nagiostv"  basedir=".">
+
+	<description>Ant build file For ${ant.project.name}</description>
+
+	<property name="base" location="./"/>
+	<property name="appDir" location="${base}/app" />
+	<property name="dirTests" location="${appDir}/tests" />
+	<property name="phpunitConfig" location="${dirTests}/bootstrap.php" />
+	<property name="logs" location="${base}/logs" />
+	<property name="docs" location="${base}/docs" />
+	<property name="codingStandard" value="Zend" />
+	<property name="usersPublicHTMLDir" value="public/html" />
+
+
+	<!-- cleans up -->
+	<target name="clean" description="Cleans up old phar files and logs from phpcs.">
+		<delete dir="${logs}" />
+		<delete dir="${docs}" />
+		<delete file="${ant.project.name}.phar" />
+	</target>
+
+
+	<!-- codesniffer -->
+	<target name="phpcs" depends="clean" description="Uses php code sniffer to check for coding standards." >
+		<mkdir dir="${logs}" />
+		<exec dir="${basedir}" executable="phpcs" failonerror="true" >
+			<arg line="--report=xml --standard=${codingStandard} --report-summary=${logs}/${ant.project.name}.phpcs.xml --extensions=php ${appDir} ${dirTests}"/>
+		</exec>
+	</target>
+
+	
+	<!-- makes a phar file -->
+	<target name="makePhar" description="Makes the distribution phar file." >
+		<exec executable="php">
+			<arg value="${appDir}/makePhar.php" />
+			<arg value="${ant.project.name}" />
+			<arg value="${appDir}" />
+		</exec>
+		<!--delete file="lib.inc" /-->
+
+    </target>
+
+
+	<!-- PHPUnit -->                                                                
+	<target name="phpunit" description="Runs the unit tests.">                      
+		<exec dir="${basedir}" executable="phpunit" failonerror="true">
+			<arg line=" --bootstrap ${phpunitConfig}" />   
+			<arg line=" ${appDir}/" />   
+		</exec>                                                                         
+	</target> 
+
+
+	<!-- Generate Documentation -->
+	<target name="phpdoc" description="Generates developer documentation taken from doc blocks." depends="clean">
+		<mkdir dir="${docs}" />
+		<exec executable="phpdoc" failonerror="true">
+			<arg line="run --title ${ant.project.name} -d ${appDir} -t ${docs}" />
+		</exec>
+	</target>
+
+
+	<!-- deploys to users public_html -->
+	<target name="deployToUsersPublicHtml" depends="makePhar" description="Deploys to the users public_html.">
+		<delete dir="${user.home}/${usersPublicHTMLDir}/${ant.project.name}" />
+		<mkdir dir="${user.home}/${usersPublicHTMLDir}/${ant.project.name}" />
+		<copy tofile="${user.home}/${usersPublicHTMLDir}/${ant.project.name}/index.phar" file="${ant.project.name}.phar" />
+	</target>
+
+
+</project>

@@ -1,0 +1,188 @@
+body {
+	background		:#000000;
+	color			:#ffffff;
+	padding			:0px;
+	margin			:0px;
+}
+
+
+circle.crit {
+	stroke			:#000000;
+	fill			:#ff0000;
+}
+
+
+circle.warn {
+	stroke			:#000000;
+	fill			:#ffff00;
+}
+
+
+circle.ok {
+	stroke			:#000000;
+	fill			:#00ff00;
+}
+
+
+#result, #resultwarn, #resultcrit, #resultunknown {
+	background		:#222222;
+	width			:32.5%;
+	height			:250px;
+	float			:left;
+	border-color	:#999999;
+	border-width	:1px;
+	margin			:0.4%;
+	padding			:0%;
+	position		:relative;
+}
+
+
+#resultok {
+	background		:#00ff00;
+}
+
+
+#resultwarn {
+	background		:#ffff00;
+}
+
+
+#resultcrit {
+	background		:#ff0000;
+	color			:#000000;
+}
+
+
+#resultunknown {
+	background		:#ffa500;
+	color			:#000000;
+}
+
+
+.service_description, .host_name {
+	float			:left;
+	width			:100%;
+	font			:175% Arial;
+	margin			:0px;
+	background		:#000000;
+	color			:#ffffff;
+	border			:2px solid #999999;
+	border-top		:0px;
+}
+
+
+.service_description {
+	text-align		:right;
+	position		:absolute;
+	bottom			:0px;
+	margin-bottom	:0px;
+	border-bottom	:0px;
+	border-right	:0px;
+	border-left		:0px;
+}
+
+
+.host_name {
+	font-weight		:bold;
+	border-right	:0px;
+	border-left		:0px;
+}
+
+
+.plugin_output {
+	float			:bottom;
+	font			:165% Arial;
+	margin			:1%;
+	height			:60%;
+	color			:#000000;
+}
+
+
+h1 {
+	font-weight		:bold;
+	border-color	:#00ff00;
+	margin-left		:auto;
+	margin-right	:auto;
+	width			:90%;
+}
+
+
+.problem {
+	color			:#ff0000;
+	font			:400% Arial;
+}
+
+
+.state_changed_date, .next_check_date {
+	width			:49%;
+	padding			:1px;
+	margin-bottom	:0px;
+	font			:130% Arial;
+	color			:#000000;
+	position		:absolute;
+}
+
+
+.state_changed_date {
+	left			:0px;
+}
+
+
+.next_check_date {
+	right			:0px;
+	text-align		:right;
+}
+
+
+#results {
+	margin-top		:30px;
+}
+
+
+#summary {
+	width			:100%;
+	float			:top;
+	top				:0px;
+	margin			:0px 0px 50px 0px;
+	padding			:0px;
+	position		:absolute;
+}
+
+
+.resultok, .resultwarn, .resultcrit, .resultunknown {
+	width			:25%; 
+	position		:relative;
+	float			:left;
+	font			:130% Arial;
+	font-weight		:bold;
+	text-align		:center;
+	color			:black;
+	margin			:0px 0px 0px 0px;
+	padding			:0px;
+}
+
+
+.resultok {
+	background		:#00ff00;
+} 
+
+
+.resultwarn {
+	background		:#ffff00;
+} 
+
+
+.resultcrit {
+	background		:#ff0000;
+} 
+
+
+.resultunknown {
+	background		:#ffa500;
+}
+
+.dates {
+	width:100%;
+	margin-top:-10px;
+	float:left;
+}
