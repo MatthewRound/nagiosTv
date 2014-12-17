@@ -6,7 +6,7 @@
  *
  * @category Core
  * @package  com.miniframework
- * @author   roundyz <roundyz@roundyz.kicks-ass.net>
+ * @author   <roundyz32@gmail.com>
  * @license  private
  * @link     http://roundyz.kicks-ass.net/work
  *

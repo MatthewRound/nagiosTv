@@ -6,7 +6,7 @@
  *
  * @category Core
  * @package  bootstrap
- * @author   roundyz <roundyz@roundyz.kicks-ass.net>
+ * @author   <roundyz32@gmail.com>
  * @license   All rights and ownership reserved
  * @link     
  *

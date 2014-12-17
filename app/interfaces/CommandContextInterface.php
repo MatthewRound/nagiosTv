@@ -6,9 +6,9 @@
  *                                                                              
  * @catagory Core                                                               
  * @package  Core.miniFrameWork                                         
- * @author   roundyz <roundyz@roundyz.kicks-ass.net>                           
+ * @author   <roundyz32@gmail.com>                           
  * @license  roundyz.kicks-ass.net/work private                                
- * @link     roundyz.kicks-ass.net/work                                        
+ * @link   github.com/MatthewRound/nagiosTv                                        
  *                                                                             
  */  
 
