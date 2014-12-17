@@ -9,15 +9,15 @@
 		<title><?php echo $title; ?> - Infrastructure Monitoring</title>
 		<link href="views/css/style.css" type="text/css" rel="stylesheet" />
 		<script type="text/javascript" src="views/scripts/jquery.min.js"></script>
-		<script type="text/javascript" src="views/scripts/script.js"></script>
+		<script type="text/javascript" src="views/scripts/nagiosTv.js"></script>
 		<script type="text/javascript">
 			//<![CDATA[
 				window.setInterval( 
 					function(){ 
-						update(); 
+						nagiosTv.update(); 
 					}, 15000); 
 				window.onload = function(){
-					update();
+					nagiosTv.update();
 				};
 			//]]>
 		</script>
