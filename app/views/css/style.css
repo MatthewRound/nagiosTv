@@ -1,188 +1,192 @@
 body {
-	background		:#000000;
-	color			:#ffffff;
-	padding			:0px;
-	margin			:0px;
+	background : #000000;
+	color      : #ffffff;
+	margin     : 0px;
+	padding    : 0px;
+}
+
+
+circle.crit, circle.warn, circle.ok {
+	stroke : #000000;
 }
 
 
 circle.crit {
-	stroke			:#000000;
-	fill			:#ff0000;
+	fill   : #ff0000;
 }
 
 
 circle.warn {
-	stroke			:#000000;
-	fill			:#ffff00;
+	fill   : #ffff00;
 }
 
 
 circle.ok {
-	stroke			:#000000;
-	fill			:#00ff00;
+	fill   : #00ff00;
 }
 
 
 #result, #resultwarn, #resultcrit, #resultunknown {
-	background		:#222222;
-	width			:32.5%;
-	height			:250px;
-	float			:left;
-	border-color	:#999999;
-	border-width	:1px;
-	margin			:0.4%;
-	padding			:0%;
-	position		:relative;
+	background   : #222222;
+	border-color : #999999;
+	border-width : 1px;
+	float        : left;
+	height       : 250px;
+	margin       : 0.4%;
+	padding      : 0%;
+	position     : relative;
+	width        : 32.5%;
 }
 
 
 #resultok {
-	background		:#00ff00;
+	background : #00ff00;
 }
 
 
 #resultwarn {
-	background		:#ffff00;
+	background : #ffff00;
 }
 
 
 #resultcrit {
-	background		:#ff0000;
-	color			:#000000;
+	background : #ff0000;
+	color      : #000000;
 }
 
 
 #resultunknown {
-	background		:#ffa500;
-	color			:#000000;
+	background : #ffa500;
+	color      : #000000;
 }
 
 
 .service_description, .host_name {
-	float			:left;
-	width			:100%;
-	font			:175% Arial;
-	margin			:0px;
-	background		:#000000;
-	color			:#ffffff;
-	border			:2px solid #999999;
-	border-top		:0px;
+	background : #000000;
+	border     : 2px solid #999999;
+	border-top : 0px;
+	color      : #ffffff;
+	float      : left;
+	font       : 175% Arial;
+	margin     : 0px;
+	width      : 100%;
 }
 
 
 .service_description {
-	text-align		:right;
-	position		:absolute;
-	bottom			:0px;
-	margin-bottom	:0px;
-	border-bottom	:0px;
-	border-right	:0px;
-	border-left		:0px;
+	border-bottom : 0px;
+	border-left   : 0px;
+	border-right  : 0px;
+	border-top    : 0px;
+	bottom        : 0px;
+	margin-bottom : 0px;
+	position      : absolute;
+	text-align    : right;
 }
 
 
 .host_name {
-	font-weight		:bold;
-	border-right	:0px;
-	border-left		:0px;
+	border-left  : 0px;
+	border-right : 0px;
+	font-weight  : bold;
 }
 
 
 .plugin_output {
-	float			:bottom;
-	font			:165% Arial;
-	margin			:1%;
-	height			:60%;
-	color			:#000000;
+	color  : #000000;
+	float  : bottom;
+	font   : 165% Arial;
+	height : 60%;
+	margin : 1%;
 }
 
 
 h1 {
-	font-weight		:bold;
-	border-color	:#00ff00;
-	margin-left		:auto;
-	margin-right	:auto;
-	width			:90%;
+	border-color : #00ff00;
+	font-weight  : bold;
+	margin-left  : auto;
+	margin-right : auto;
+	width        : 90%;
 }
 
 
 .problem {
-	color			:#ff0000;
-	font			:400% Arial;
+	color : #ff0000;
+	font  : 400% Arial;
 }
 
 
 .state_changed_date, .next_check_date {
-	width			:49%;
-	padding			:1px;
-	margin-bottom	:0px;
-	font			:130% Arial;
-	color			:#000000;
-	position		:absolute;
+	color         : #000000;
+	font          : 130% Arial;
+	margin-bottom : 0px;
+	padding       : 1px;
+	position      : absolute;
+	width         : 49%;
 }
 
 
 .state_changed_date {
-	left			:0px;
+	left : 0px;
 }
 
 
 .next_check_date {
-	right			:0px;
-	text-align		:right;
+	right      : 0px;
+	text-align : right;
 }
 
 
 #results {
-	margin-top		:30px;
+	margin-top : 30px;
 }
 
 
 #summary {
-	width			:100%;
-	float			:top;
-	top				:0px;
-	margin			:0px 0px 50px 0px;
-	padding			:0px;
-	position		:absolute;
+	float    : top;
+	margin   : 0px 0px 50px 0px;
+	padding  : 0px;
+	position : absolute;
+	top      : 0px;
+	width    : 100%;
 }
 
 
 .resultok, .resultwarn, .resultcrit, .resultunknown {
-	width			:25%; 
-	position		:relative;
-	float			:left;
-	font			:130% Arial;
-	font-weight		:bold;
-	text-align		:center;
-	color			:black;
-	margin			:0px 0px 0px 0px;
-	padding			:0px;
+	color       : black;
+	float       : left;
+	font        : 130% Arial;
+	font-weight : bold;
+	margin      : 0px 0px 0px 0px;
+	padding     : 0px;
+	position    : relative;
+	text-align  : center;
+	width       : 25%;
 }
 
 
 .resultok {
-	background		:#00ff00;
-} 
+	background : #00ff00;
+}
 
 
 .resultwarn {
-	background		:#ffff00;
-} 
+	background : #ffff00;
+}
 
 
 .resultcrit {
-	background		:#ff0000;
-} 
+	background : #ff0000;
+}
 
 
 .resultunknown {
-	background		:#ffa500;
+	background : #ffa500;
 }
 
+
 .dates {
-	width           : 100%;
-	margin-top      : -10px;
-	float           : left;
+	float      : left;
+	margin-top : -10px;
+	width      : 100%;
 }
