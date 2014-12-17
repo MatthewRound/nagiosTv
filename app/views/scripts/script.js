@@ -26,7 +26,8 @@ function update()
 			try {
 				var results = jQuery.parseJSON(msg);
 				var resultCount = results.length;
-				if (resultCount >= 1) {
+				var thereAreResults = resultCount >= 1;
+				if (thereAreResults) {
 					for (var i = 0; i< resultCount; i++) {
 						var result = results[i];
 						newInnerHtml += format(result, i);

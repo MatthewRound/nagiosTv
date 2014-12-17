@@ -120,9 +120,8 @@ class Status
     public function setStatusFileLocation($statusFileLocation)
     {
         $return = false;
-        $statusFileLocationIsOK = isset($statusFileLocation) 
-            && $statusFileLocation != null && is_string($statusFileLocation);
-        if ($statusFileLocationIsOK) {
+		$statusFileLocationOk = isset($statusFileLocation) && $statusFileLocation != null && is_string($statusFileLocation);
+        if ($statusFileLocationOk) {
             $this->_statusFileLocation = $statusFileLocation;
             $return = true;
         }
