@@ -150,7 +150,6 @@ class Bootstrap
      */
     static public function setupLogging()
     {
-        require_once "configs/dirLocations.php";
         require_once DIR_MODEL."Errors.php";
     }
 
