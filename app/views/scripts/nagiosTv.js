@@ -1,15 +1,19 @@
 var nagiosTv = {
+    summaryResults        : "",
+    servicesResults       : "",
+    urlGetSummary         : "?command=getSummary",
+    urlGetProblemServices : "?command=getProblemServices",
     update : function() {
         $.ajax({
             type    : "POST",
-            url     : "?command=getSummary",
+            url     : nagiosTv.urlGetSummary,
             data    : "",
             success : function (msg) {
                 var summaryDiv   = document.getElementById('summary');
                 var newInnerHtml = "";
                 try {
-                    var results  = jQuery.parseJSON(msg);
-                    newInnerHtml = nagiosTv.formatSummaryBar(results);
+                    nagiosTv.summaryResults  = jQuery.parseJSON(msg);
+                    newInnerHtml = nagiosTv.formatSummaryBar(nagiosTv.summaryResults);
                 } catch (err) {
                     newInnerHtml = msg;
                 }
@@ -18,22 +22,22 @@ var nagiosTv = {
         });
         $.ajax({
             type    : "POST",
-            url     : "?command=getProblemServices",
+            url     : nagiosTv.urlGetProblemServices,
             data    : "",
             success : function (msg) {
                 var resultDiv    = document.getElementById('results');
                 var newInnerHtml = "";
                 try {
-                    var results         = jQuery.parseJSON(msg);
-                    var resultCount     = results.length;
+                    nagiosTv.servicesResults = jQuery.parseJSON(msg);
+                    var resultCount     = nagiosTv.servicesResults.length;
                     var thereAreResults = resultCount >= 1;
                     if (thereAreResults) {
                         for (var i = 0; i< resultCount; i++) {
-                            var result = results[i];
-                            newInnerHtml += nagiosTv.format(result, i);
+                            var result = nagiosTv.servicesResults[i];
+                            newInnerHtml += nagiosTv.formatService(result, i);
                         }
                     } else {
-                        newInnerHtml += "<h1>Infrastructure OK</h1>"
+                        newInnerHtml += "<h1>Infrastructure OK</h1>";
                     }
                 } catch (err) {
                     newInnerHtml = msg;
@@ -43,25 +47,25 @@ var nagiosTv = {
         });
     },
     formatSummaryBar : function(result) {
-        var formattedOutput =  "<p class=\"resultcrit\">Critical:"+result.crit+"</p>";
-        formattedOutput += "<p class=\"resultwarn\">Warning:"+result.warn+"</p>";
-        formattedOutput +=  "<p class=\"resultunknown\">Unknown:"+result.unknown+"</p>";
-        formattedOutput +=  "<p class=\"resultok\">OK:"+result.ok+"</p>";
+        var formattedOutput = "<p class=\"resultcrit\">Critical:"+result.crit+"</p>";
+        formattedOutput    += "<p class=\"resultwarn\">Warning:"+result.warn+"</p>";
+        formattedOutput    += "<p class=\"resultunknown\">Unknown:"+result.unknown+"</p>";
+        formattedOutput    += "<p class=\"resultok\">OK:"+result.ok+"</p>";
         return formattedOutput;
     },
-    format : function(result, count) {
+    formatService : function(result, count) {
         var currentDateInMilli       = new Date().getTime();
         var nextCheckInMilli         = result.next_check;
         var stateHeldForInMilli      = result.last_state_change;
         var secsSinceLastStateChange = (currentDateInMilli - stateHeldForInMilli) / 1000;
         var nextCheckDate            = new Date(nextCheckInMilli * 1000);
         var stateChangedDate         = new Date(stateHeldForInMilli * 1000);
-        var id                       = nagiosTv.getDivId(result.current_state);
+        var id                       = nagiosTv.getServiceDivClass(result.current_state);
         var nextCheckDateAsString    = nagiosTv.formatDateString(nextCheckDate);
         var stateChangedDateAsString = nagiosTv.formatDateString(stateChangedDate);
         var serviceNamePlaceHolder   = nagiosTv.limitStringChars(result.service_description, 48);
         var hostNamePlaceHolder      = nagiosTv.limitStringChars(result.host_name, 48);
-        var formattedOutput          = "<div id                                           = \"" + id + "\">";
+        var formattedOutput          = "<div id=\"" + id + "\">";
         formattedOutput += "<p class=\"host_name\">" + hostNamePlaceHolder + "</p>";
         formattedOutput += "<p class=\"plugin_output\">" + result.plugin_output + "</p>";
         formattedOutput += "<div class=\"dates\">";
@@ -74,7 +78,7 @@ var nagiosTv = {
         formattedOutput += "</p></div>";
         return formattedOutput;
     },
-    getDivId : function(currentState) {
+    getServiceDivClass : function(currentState) {
         var id      = "result";
         var ok      = 0;
         var warn    = 1;

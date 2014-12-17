@@ -14,10 +14,5 @@
 
 set_include_path(get_include_path() . PATH_SEPARATOR. __DIR__. '/');
 require_once 'bootstrap.php';
-
-
-// go 
-$mainController = DIR_MODEL."Controller.php";
-require_once $mainController;
-$c = new Controller();
-$c->process();
+new Bootstrap();
+/* Bootstrap::run(); */

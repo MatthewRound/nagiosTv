@@ -64,7 +64,6 @@ class File
      * @return File An instance of file with the location set 
      * @static
      * @access public
-     * @return void
      */
     public static function constructWithLocation($location)
     {
