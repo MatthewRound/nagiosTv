@@ -17,7 +17,8 @@
  * Info 
  * 
  * Represents the general information about the Nagios status file
- * Most properties within this class are for completion. For further definitions see
+ * Most properties within this class are for completion. For further 
+ * definitions see
  * http://www.nagios.org/documentation/
  * 
  * @uses StatusPopulator

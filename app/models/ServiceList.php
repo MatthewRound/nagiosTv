@@ -17,7 +17,8 @@
  * ServiceList 
  * 
  * Simple collection class that holds Servicestatuses
- * Most properties within this class are for completion. For further definitions see
+ * Most properties within this class are for completion. 
+ * For further definitions see
  * http://www.nagios.org/documentation/
  * 
  * @package none
@@ -114,7 +115,8 @@ class ServiceList
     {
         $return = false;
         $listIsValid = isset($this->_list) && $this->_list != null 
-            && is_array($this->_list) && is_int($i) && $i <= count($this->_list);
+            && is_array($this->_list) && is_int($i) 
+            && $i <= count($this->_list);
         if ($listIsValid) {
             $return = $this->_list[$i];
         }
@@ -181,7 +183,8 @@ class ServiceList
     /**
      * getBreachingStates 
      * 
-     * Gets the breaching states of all the services in the list, sorts by severity. 
+     * Gets the breaching states of all the services in the 
+     * list, sorts by severity. 
      * 
      * @access public
      * @return String The breaching objects as Json.

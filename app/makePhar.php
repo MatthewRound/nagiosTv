@@ -40,25 +40,27 @@ class PharMaker
     static function makePhar($project, $incDir)
     {
         $ret = false;
-		try {
-			$libIncFile = "lib.inc";
-			$contents = "<?php
-				\$pharName = \"".$project.".phar\";
-			include './'.\$pharName;
-			?>";
-			file_put_contents($libIncFile, $contents);
-		} catch (exception $e) {
+        try {
+            $libIncFile = "lib.inc";
+            $contents = "<?php
+                \$pharName = \"".$project.".phar\";
+            include './'.\$pharName;
+            ?>";
+            file_put_contents($libIncFile, $contents);
+        } catch (exception $e) {
             printf("Problem adding contents to incfile %s", $libIncFile);    
-			echo $e->message();
-		}
-		try {
-			$pharName = $project.".phar";
-			$phar = new Phar($pharName);
-			$dirContentsCount = 0;
-		} catch (exception $e) {
-            $error = sprintf("Problem creating phar %s is it disabled in ini?", $pharName);    
-			die($error);
-		}
+            echo $e->message();
+        }
+        try {
+            $pharName = $project.".phar";
+            $phar = new Phar($pharName);
+            $dirContentsCount = 0;
+        } catch (exception $e) {
+            $error = sprintf(
+                "Problem creating phar %s is it disabled in ini?", $pharName
+            );    
+            die($error);
+        }
         try {
             $buildFromDirectoryResult = $phar->buildFromDirectory($incDir);
             $dirContentsCount = count($buildFromDirectoryResult);

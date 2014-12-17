@@ -17,7 +17,8 @@
  * Status 
  * 
  * Runs and collects all the information from the nagios status file
- * Most properties within this class are for completion. For further definitions see
+ * Most properties within this class are for completion. 
+ * For further definitions see
  * http://www.nagios.org/documentation/
  * 
  * @package none
@@ -118,7 +119,8 @@ class Status
     public function setStatusFileLocation($statusFileLocation)
     {
         $return = false;
-		$statusFileLocationOk = isset($statusFileLocation) && $statusFileLocation != null && is_string($statusFileLocation);
+        $statusFileLocationOk = isset($statusFileLocation) 
+            && $statusFileLocation != null && is_string($statusFileLocation);
         if ($statusFileLocationOk) {
             $this->_statusFileLocation = $statusFileLocation;
             $return = true;
@@ -163,7 +165,8 @@ class Status
     public function parseStatusFile()
     {
         $ret = true;
-        $statusFile = File::constructWithLocation($this->getStatusFileLocation());
+        $statusFile 
+            = File::constructWithLocation($this->getStatusFileLocation());
         $fileIsPresent = $statusFile->isPresent();    
         $fileIsReadable = $statusFile->canRead();
         $fileIsOkToOpen = $fileIsPresent && $fileIsReadable;
@@ -208,7 +211,8 @@ class Status
                     if ($lineIsAComment) {
                         continue;
                     }
-                    $lineIsStartOfBlock = preg_match("/[a-zA-Z0-9]* \{/", $line);
+                    $lineIsStartOfBlock 
+                        = preg_match("/[a-zA-Z0-9]* \{/", $line);
                     $lineIsEndOfBlock = preg_match("/\}/", $line);
                     if ($lineIsStartOfBlock) {
                         $nameOnly = explode(" ", $line);
@@ -222,7 +226,9 @@ class Status
                                     = $className == "Servicestatus";
                                 if ($classNameIsAServiceStatus) {
                                     $addToListResult 
-                                        = $this->_serviceList->addToList($class);
+                                        = $this->_serviceList->addToList(
+                                            $class
+                                        );
                                 }
                             } else {
                                 //we don't have a class for this yet

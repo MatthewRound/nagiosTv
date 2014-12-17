@@ -35,9 +35,9 @@ class CommandGetSummary extends Command
      * @return void
      */
     public function execute(CommandContext $context)
-	{
-		$this->display($this->getServiceList()->getSummary());
-	}
+    {
+        $this->display($this->getServiceList()->getSummary());
+    }
 
 
     /**
@@ -48,8 +48,8 @@ class CommandGetSummary extends Command
      * @return void
      */
     public function display($xml)
-	{
-		print $xml;
-	}
+    {
+        print $xml;
+    }
 
 }

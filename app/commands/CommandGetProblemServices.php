@@ -35,9 +35,9 @@ class CommandGetProblemServices extends Command
      * @return void
      */
     public function execute(CommandContext $context)
-	{
-		$this->display($this->getServiceList()->getBreachingStates());
-	}
+    {
+        $this->display($this->getServiceList()->getBreachingStates());
+    }
 
 
     /**
@@ -48,9 +48,9 @@ class CommandGetProblemServices extends Command
      * @return void
      */
     public function display($xml)
-	{
-		print $xml;
-	}
+    {
+        print $xml;
+    }
 
 
 }

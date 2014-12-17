@@ -16,9 +16,12 @@
 /**
  * Contactstatus 
  * 
- * Holds information about the status of a contact taken from the status.dat file.
- * Most properties within this class are for completion. For further definitions see
+ * Holds information about the status of a contact taken from 
+ * the status.dat file.
+ * Most properties within this class are for completion. For 
+ * further definitions see
  * http://www.nagios.org/documentation/
+ * Also this fails phpcs
  * 
  * @uses StatusPopulator
  * @package none
@@ -164,7 +167,8 @@ class Contactstatus extends StatusPopulator
     public function getModifiedhostattributes()
     {
         $return = false;
-        $modified_host_attributesIsSet = isset($this->_modified_host_attributes);
+        $modified_host_attributesIsSet 
+            = isset($this->_modified_host_attributes);
         if ($modified_host_attributesIsSet) {
             $return = $this->_modified_host_attributes;
         }
@@ -199,7 +203,8 @@ class Contactstatus extends StatusPopulator
     public function getHostnotificationperiod()
     {
         $return = false;
-        $host_notification_periodIsSet = isset($this->_host_notification_period);
+        $host_notification_periodIsSet 
+            = isset($this->_host_notification_period);
         if ($host_notification_periodIsSet) {
             $return = $this->_host_notification_period;
         }
@@ -251,7 +256,8 @@ class Contactstatus extends StatusPopulator
     public function getLastservicenotification()
     {
         $return = false;
-        $last_service_notificationIsSet = isset($this->_last_service_notification);
+        $last_service_notificationIsSet 
+            = isset($this->_last_service_notification);
         if ($last_service_notificationIsSet) {
             $return = $this->_last_service_notification;
         }
@@ -393,7 +399,8 @@ class Contactstatus extends StatusPopulator
     {
         $return = false;
         $host_notification_periodIsOK 
-            = isset($host_notification_period) && $host_notification_period != null;
+            = isset($host_notification_period) 
+            && $host_notification_period != null;
         if ($host_notification_periodIsOK) {
             $this->_host_notification_period = $host_notification_period;
             $return = true;
@@ -475,14 +482,16 @@ class Contactstatus extends StatusPopulator
      * @access public
      * @return bool
      */
-    public function setServicenotificationsenabled($service_notifications_enabled)
+    public function setServicenotificationsenabled(
+        $service_notifications_enabled)
     {
         $return = false;
         $service_notifications_enabledIsOK 
             = isset($service_notifications_enabled) 
             && $service_notifications_enabled != null;
         if ($service_notifications_enabledIsOK) {
-            $this->_service_notifications_enabled = $service_notifications_enabled;
+            $this->_service_notifications_enabled 
+                = $service_notifications_enabled;
             $return = true;
         }
         return $return;
@@ -550,7 +559,8 @@ class Contactstatus extends StatusPopulator
         $out['service_notification_period']=$this->_service_notification_period;
         $out['last_host_notification']=$this->_last_host_notification;
         $out['last_service_notification']=$this->_last_service_notification;
-        $out['service_notifications_enabled']=$this->_service_notifications_enabled;
+        $out['service_notifications_enabled']
+            =$this->_service_notifications_enabled;
         $out['host_notifications_enabled']=$this->_host_notifications_enabled;
         return $out;
     }

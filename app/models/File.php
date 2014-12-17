@@ -17,7 +17,8 @@
  * File 
  * 
  * Represents a file on the file system
- * Holds information about the path,name, etc. Performs basic checks to the file.
+ * Holds information about the path,name, etc. 
+ * Performs basic checks to the file.
  * 
  * @package none
  * @version 1.0
@@ -36,9 +37,9 @@ class File
      * This should include the file itself e.g /bin/bash
      * 
      * @var String 
-     * @access protected
+     * @access public
      */
-    protected $location;
+    public $location;
 
 
     /**
@@ -48,9 +49,9 @@ class File
      * Not really important, just an alias...
      * 
      * @var String 
-     * @access protected
+     * @access public
      */
-    protected $name;
+    public $name;
 
 
     /**

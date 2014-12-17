@@ -38,7 +38,7 @@ class CommandDefault extends Command
     public function execute(CommandContext $context)
     {
         $this->display("");
-		return true;
+        return true;
     }
 
 
