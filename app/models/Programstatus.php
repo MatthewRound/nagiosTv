@@ -1,14 +1,14 @@
 <?php
 /**
- * Holds the Programstatus class
- * 
+ * Holds the class ./models/Programstatus.php
+ *
  * PHP version 5
- * 
- *   @category Nagios
- *   @package  Com.example.nagios
- *   @author   Matthew Round <mround@example.com> 
- *   @license  http://example.com example
- *   @link     example.com 
+ *
+ * @category Core
+ * @package  ./models/Programstatus.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
  *
  */
 
@@ -20,14 +20,12 @@
  * Most properties within this class are for completion. For further definitions see
  * http://www.nagios.org/documentation/
  * 
- *   @category  Nagios
- *   @package   Com.example.nagios
- *   @author    Matthew Round <mround@example.com> 
- *   @copyright 2012 example
- *   @license   http://example.com example
- *   @version   Release:1.0
- *   @link      example.com 
- *   @use       StatusPopulator
+ * @uses StatusPopulator
+ * @package none
+ * @version 1.0
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
+ * @license All rights and ownership reserved
  */
 class Programstatus extends StatusPopulator
 {

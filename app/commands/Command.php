@@ -1,33 +1,31 @@
 <?php
-/**                                                                             
- * Holds the Abstract Class Command
- *                                                                              
- * PHP version 5                                                                
- *                                                                              
- * @catagory Core                                                               
- * @package  Core.miniFrameWork
- * @author   <roundyz32@gmail.com>                            
- * @license  as is.                                                             
- * @link   github.com/MatthewRound/nagiosTv                                         
- *                                                                              
- */ 
+/**
+ * Holds the class ./commands/Command.php
+ *
+ * PHP version 5
+ *
+ * @category Core
+ * @package  ./commands/Command.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
+ *
+ */
 
 
 require_once DIR_MODEL."CommandContext.php";
 
 
-/**                                                                     
- * Command                                                                
- *                                                                            
- * @abstract                                                                  
- * @category  Core                                                            
- * @package   Core.miniFrameWork                                         
- * @author    roundyz <roundyz@roundyz.kicks-ass.net>                      
- * @copyright 2013 roundyz.kicks-ass.net/work                           
- * @license   roundyz.kicks-ass.net/work private                        
- * @version   Release:1.0                                               
- * @link      roundyz.kicks-ass.net/work                               
- */  
+/**
+ * Command 
+ * 
+ * @abstract
+ * @package none
+ * @version 1.0
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
+ * @license All rights and ownership reserved
+ */
 abstract class Command
 {
 

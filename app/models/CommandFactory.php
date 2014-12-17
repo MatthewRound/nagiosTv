@@ -1,30 +1,28 @@
 <?php
-/**                                                                             
- * Holds the CommandFactory class
- *                                                                              
- * PHP version 5                                                                
- *                                                                              
- * @catagory Core                                                               
- * @package  Core.miniFrameWork                                                
- * @author   <roundyz32@gmail.com>                            
- * @license  roundyz.kicks-ass.net/work private                                 
- * @link   github.com/MatthewRound/nagiosTv                                         
- *                                                                              
- */ 
+/**
+ * Holds the class ./models/CommandFactory.php
+ *
+ * PHP version 5
+ *
+ * @category Core
+ * @package  ./models/CommandFactory.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
+ *
+ */
 
 
-/**                                                           
+/**
  * CommandFactory 
- *                                                                        
- * @category  Core                  
- * @package   Core.miniFrameWork                                          
- * @author    roundyz <roundyz@roundyz.kicks-ass.net>                    
- * @copyright 2013 roundyz.kicks-ass.net/work                                  
- * @license   roundyz.kicks-ass.net/work private                              
- * @version   Release:1.0                                                     
- * @link      roundyz.kicks-ass.net/work                                      
- * @use       CommandFactoryInterface                           
- */    
+ * 
+ * @uses CommandFactoryInterface
+ * @package none
+ * @version 1.0
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
+ * @license All rights and ownership reserved
+ */
 class CommandFactory implements CommandFactoryInterface
 {
 
@@ -45,7 +43,7 @@ class CommandFactory implements CommandFactoryInterface
         $className = "Command".UCFirst($action);
         $commandNamePrefix = "Command";
         $file = DIR_COMMANDS.$className.".php";
-        if ($action != null) {
+        if ($action != null && !is_bool($action)) {
             if (preg_match('/\W/', $action)) {
                 //this is dumb, should return the default page
                 //throw new Exception("illegal chars in action");

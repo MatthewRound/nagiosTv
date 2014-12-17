@@ -1,14 +1,14 @@
 <?php
 /**
- * Holds the class app/tests/bootstrap.php
+ * Holds the class ./tests/bootstrap.php
  *
  * PHP version 5
  *
  * @category Core
- * @package  com.miniframework
- * @author   <roundyz32@gmail.com>
- * @license  private
- * @link     http://roundyz.kicks-ass.net/work
+ * @package  ./tests/bootstrap.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
  *
  */
 

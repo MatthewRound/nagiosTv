@@ -1,30 +1,28 @@
 <?php
-/**                                                                             
- * Holds the Interface Controller
- *                                                                              
- * PHP version 5                                                                
- *                                                                              
- * @catagory Core                                                               
- * @package  Core.miniFrameWork                                             
- * @author   <roundyz32@gmail.com>                          
- * @license  roundyz.kicks-ass.net/work private                               
- * @link   github.com/MatthewRound/nagiosTv                                      
- *                                                                            
- */     
-
-
-/**                                                                           
- * ControllerInterface
+/**
+ * Holds the class ./interfaces/ControllerInterface.php
  *
+ * PHP version 5
+ *
+ * @category Core
+ * @package  ./interfaces/ControllerInterface.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
+ *
+ */
+
+
+/**
+ * ControllerInterface 
+ * 
  * The interface to Controller
  *                                                                            
- * @category  Core
- * @package   Core.miniFrameWork                                              
- * @author    roundyz <roundyz@roundyz.kicks-ass.net>                       
- * @copyright 2013 roundyz.kicks-ass.net/work                                  
- * @license   roundyz.kicks-ass.net/work private                              
- * @version   Release:1.0                                                     
- * @link      roundyz.kicks-ass.net/work                                     
+ * @package none
+ * @version 1.0
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
+ * @license All rights and ownership reserved
  */
 interface ControllerInterface
 {

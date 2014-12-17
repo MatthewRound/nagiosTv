@@ -1,16 +1,17 @@
 <?php
 /**
- * Holds the class bootstrap.php
+ * Holds the class ./bootstrap.php
  *
  * PHP version 5
  *
  * @category Core
- * @package  bootstrap
- * @author   <roundyz32@gmail.com>
- * @license   All rights and ownership reserved
- * @link     
+ * @package  ./bootstrap.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
  *
  */
+
 
 set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. '/commands/');
 set_include_path (get_include_path() . PATH_SEPARATOR. __DIR__. './commands/');

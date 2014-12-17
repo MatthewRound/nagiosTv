@@ -1,16 +1,16 @@
 <?php
-/**                                                                             
- * Holds the Test Class CommandContextTest
- *                                                                              
- * PHP version 5                                                                
- *                                                                              
- * @catagory Tests
- * @package  Core.miniFrameWork.tests
- * @author   <roundyz32@gmail.com>                            
- * @license  roundyz.kicks-ass.net/work private                                 
- * @link   github.com/MatthewRound/nagiosTv                                         
- *                                                                              
- */ 
+/**
+ * Holds the class ./tests/CommandContextTest.php
+ *
+ * PHP version 5
+ *
+ * @category Core
+ * @package  ./tests/CommandContextTest.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
+ *
+ */
 
 
 require_once DIR_MODEL.'CommandContext.php';
@@ -18,19 +18,18 @@ require_once DIR_MODEL.'CommandContext.php';
 
  
 /**
- * CommandContextTest
- *
+ * CommandContextTest 
+ * 
  * Tests the class CommandContext
  *                                     
- * @category  Tests                                                             
- * @package   Core.miniFrameWork.tests                                  
- * @author    roundyz <roundyz@roundyz.kicks-ass.net>                  
- * @copyright 2013 roundyz.kicks-ass.net/work                         
- * @license   roundyz.kicks-ass.net/work private                                
- * @version   Release:1.0                                                       
- * @link      roundyz.kicks-ass.net/work                             
- * @use       PHPUnit_Framework_TestCase                            
- */   
+ * @uses PHPUnit
+ * @uses _Framework_TestCase
+ * @package none
+ * @version 1.0
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
+ * @license All rights and ownership reserved
+ */
 class CommandContextTest extends PHPUnit_Framework_TestCase
 {
 

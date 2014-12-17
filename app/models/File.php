@@ -1,14 +1,14 @@
 <?php
 /**
- * Holds the File class
- * 
+ * Holds the class ./models/File.php
+ *
  * PHP version 5
- * 
- *   @category Nagios
- *   @package  Com.example.nagios
- *   @author   Matthew Round <mround@example.com> 
- *   @license  http://example.com example
- *   @link     example.com 
+ *
+ * @category Core
+ * @package  ./models/File.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
  *
  */
 
@@ -19,13 +19,11 @@
  * Represents a file on the file system
  * Holds information about the path,name, etc. Performs basic checks to the file.
  * 
- *   @category  Nagios
- *   @package   Com.example.GoogleFingerPrintWrapper
- *   @author    Matthew Round <mround@example.com> 
- *   @copyright 2012 example
- *   @license   http://example.com example
- *   @version   Release:1.0
- *   @link      example.com 
+ * @package none
+ * @version 1.0
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
+ * @license All rights and ownership reserved
  */
 class File
 {

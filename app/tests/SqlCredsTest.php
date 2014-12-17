@@ -1,35 +1,33 @@
 <?php
-/**                                                                             
- * Holds the Test Class SqlCredsTest
- *                                                                              
- * PHP version 5                                                                
- *                                                                              
- * @category Tests
- * @package  Core.miniFrameWork.tests
- * @author   <roundyz32@gmail.com>                            
- * @license  roundyz.kicks-ass.net/work private                                 
- * @link   github.com/MatthewRound/nagiosTv                                         
- *                                                                              
- */                                                                             
+/**
+ * Holds the class ./tests/SqlCredsTest.php
+ *
+ * PHP version 5
+ *
+ * @category Core
+ * @package  ./tests/SqlCredsTest.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
+ *
+ */
 
 
 require_once DIR_MODEL."SqlCreds.php";
 
 
-/** 
- * SqlCredsTest
- *
+/**
+ * SqlCredsTest 
+ * 
  * Tests the class SqlCreds
  *  
- * @category  Tests                                                             
- * @package   Core.miniFrameWork.tests
- * @author    roundyz <roundyz@roundyz.kicks-ass.net> 
- * @copyright 2013 roundyz.kicks-ass.net/work                                   
- * @license   roundyz.kicks-ass.net/work private                                
- * @version   Release:1.0
- * @link      roundyz.kicks-ass.net/work                                        
- * @use       PHPUnit_Framework_TestCase
- */   
+ * @uses PHPUnit_Framework_TestCase
+ * @package none
+ * @version 1.0
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
+ * @license All rights and ownership reserved
+ */
 class SqlCredsTest extends PHPUnit_Framework_TestCase
 {
 

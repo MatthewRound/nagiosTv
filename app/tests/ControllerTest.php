@@ -1,35 +1,34 @@
 <?php
-/**                                                                             
- * Holds the Test Class ControllerTest
- *                                                                              
- * PHP version 5                                                                
- *                                                                              
- * @category Tests                                                            
- * @package  Core.miniFrameWork.tests
- * @author   <roundyz32@gmail.com>
- * @license  roundyz.kicks-ass.net/work private    
- * @link   github.com/MatthewRound/nagiosTv           
- *                                                                              
+/**
+ * Holds the class ./tests/ControllerTest.php
+ *
+ * PHP version 5
+ *
+ * @category Core
+ * @package  ./tests/ControllerTest.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
+ *
  */
 
 
 require_once DIR_MODEL."Controller.php";
 
 
-/** 
- * ControllerTest
- *
+/**
+ * ControllerTest 
+ * 
  * Tests the class Controller
  *                                     
- * @category  Tests                                                             
- * @package   Core.miniFrameWork.tests
- * @author    roundyz <roundyz@roundyz.kicks-ass.net>                         
- * @copyright 2013 roundyz.kicks-ass.net/work                                 
- * @license   roundyz.kicks-ass.net/work private                                
- * @version   Release:1.0                                                       
- * @link      roundyz.kicks-ass.net/work                                       
- * @use       PHPUnit_Framework_TestCase
- */   
+ * @uses PHPUnit
+ * @uses _Framework_TestCase
+ * @package none
+ * @version 1.0
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
+ * @license All rights and ownership reserved
+ */
 class ControllerTest extends PHPUnit_Framework_TestCase
 {
 

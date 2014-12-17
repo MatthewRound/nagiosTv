@@ -1,32 +1,30 @@
 <?php
-/**                                                                             
- * Holds the Class Controller
- *                                                                              
- * PHP version 5                                                                
- *                                                                              
- * @catagory Core                                                               
- * @package  Core.miniFrameWork                                               
- * @author   <roundyz32@gmail.com>                          
- * @license  roundyz.kicks-ass.net/work private                                
- * @link   github.com/MatthewRound/nagiosTv                                        
- *                                                                              
+/**
+ * Holds the class ./models/Controller.php
+ *
+ * PHP version 5
+ *
+ * @category Core
+ * @package  ./models/Controller.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
+ *
  */
 
 
-/**                                                                           
- * Controller
- *
+/**
+ * Controller 
+ * 
  * Represents the main controller 
  *                                                                            
- * @category  Core              
- * @package   Core.miniFrameWork                                              
- * @author    roundyz <roundyz@roundyz.kicks-ass.net>                         
- * @copyright 2013 roundyz.kicks-ass.net/work                                 
- * @license   roundyz.kicks-ass.net/work private                              
- * @version   Release:1.0                                                     
- * @link      roundyz.kicks-ass.net/work                                      
- * @use       ControllerInterface                                            
- */   
+ * @uses ControllerInterface
+ * @package none
+ * @version 1.0
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
+ * @license All rights and ownership reserved
+ */
 class Controller implements ControllerInterface
 {
 

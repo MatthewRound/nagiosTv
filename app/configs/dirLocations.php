@@ -4,11 +4,11 @@
  *
  * PHP version 5
  *
- * @catagory Core
- * @package  Core.miniFrameWork
- * @author   <roundyz32@gmail.com>
- * @license  as is.
- * @link   github.com/MatthewRound/nagiosTv
+ * @category Core
+ * @package  ./configs/dirLocations.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
  *
  */
 
@@ -18,7 +18,7 @@
  */
 define("APP_NAME", "miniFrameWork");
 define("APP_COPYRIGHT", "All rights reserved");
-define("APP_COPYRIGHT_LINK", "http://roundyz.kicks-ass.net/work");
+define("APP_COPYRIGHT_LINK", "http://github.com/MatthewRound");
 
 
 /**

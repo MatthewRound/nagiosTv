@@ -1,25 +1,25 @@
 <?php
-/**                                                                            
- * File to hold the makephar script
- *                                                                            
- * PHP version 5                                                              
- *                                                                            
- * @catagory Core                                                             
- * @package  Core.miniFrameWork                                               
- * @author   <roundyz32@gmail.com>                          
- * @license  roundyz.kicks-ass.net/work private                               
- * @link   github.com/MatthewRound/nagiosTv                                       
- *                                                                              
- */    
+/**
+ * Holds the class ./makePhar.php
+ *
+ * PHP version 5
+ *
+ * @category Core
+ * @package  ./makePhar.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
+ *
+ */
 
 
 /**
  * PharMaker 
  * 
  * @package none
- * @version $id$
- * @copyright 2012 ChangeSite.co.uk
- * @author Matthew Round <roundyz@roundyz.kicks-ass.net> 
+ * @version 1.0
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
  * @license All rights and ownership reserved
  */
 class PharMaker
@@ -56,7 +56,8 @@ class PharMaker
 			$phar = new Phar($pharName);
 			$dirContentsCount = 0;
 		} catch (exception $e) {
-            printf("Problem creating phar %s", $pharName);    
+            $error = sprintf("Problem creating phar %s is it disabled in ini?", $pharName);    
+			die($error);
 		}
         try {
             $buildFromDirectoryResult = $phar->buildFromDirectory($incDir);

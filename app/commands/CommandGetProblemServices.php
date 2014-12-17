@@ -1,16 +1,17 @@
 <?php
 /**
- * Gets the services that are in a problem state.
+ * Holds the class ./commands/CommandGetProblemServices.php
  *
  * PHP version 5
  *
- *   @category Nagios
- *   @package  Com.example.nagios
- *   @author   Matthew Round <mround@example.com>
- *   @license  http://example.com example
- *   @link     example.com
+ * @category Core
+ * @package  ./commands/CommandGetProblemServices.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
  *
  */
+
 
 /**
  * CommandGetProblemServices 
@@ -18,8 +19,8 @@
  * @uses Command
  * @package none
  * @version 1.0
- * @copyright 2014 
- * @author roundyz <roundyz@roundyz.kicks-ass.net> 
+ * @copyright 2014 private
+ * @author Matthew Round <roundyz32@gmail.com> 
  * @license All rights and ownership reserved
  */
 class CommandGetProblemServices extends Command

@@ -4,11 +4,11 @@
  *
  * PHP version 5
  *
- * @catagory Core
- * @package  com.miniFrameWork
- * @author   <roundyz32@gmail.com>
- * @license  as is.
- * @link   github.com/MatthewRound/nagiosTv
+ * @category Core
+ * @package  ./index.php
+ * @author   Matthew Round <roundyz32@gmail.com>
+ * @license  private (All rights and ownership reserved)
+ * @link     private
  *
  */
 
